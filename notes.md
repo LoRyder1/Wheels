@@ -42,3 +42,35 @@ Building well designed objects have a single responsibility, their very nature r
 Write Looslely Coupled Code
 - Moving the creation of a new instance of another class outside of the current class decouples the two classes. Decoupling can be achieved by rearranging existing code.
 - This technique is known as **dependency injection**. DI is software design pattern that implements inversion of control for resolving dependencies. A **dependency** is an object that can be used as a service. An injection is the passing of a dependency to a dependent object (a client) that would use it. The service is part of the client's state. Passing the service to the client, rather than allowing a client to build or find the service, is the fundamental requirement of the pattern. 
+- inversion of control - increase modularity and make it extensible.
+- dependency inversion principle 
+  - high level modules should not depend on low-level modules. Both should depend on abstractions.
+  - Abstractions should not depend on details. Details should depend on abstractions. 
+- through DI a class can be smarter because it knows less. 
+
+Isolate instance creation, Isolate vulnerable externable messages, 
+
+Remove Arguemnt-Order Dependencies
+
+Remove defaults form initialize and isolate them inside of a separate wrapping method. 
+
+Choosing Dependency Direction
+
+- depend on things that change less often then you do. 
+  - some classes are more likely than others to have changes in requirements.
+  - concrete classes are more likely to change than abstract classes.
+  - changing a class that has many dependents will result in widespread consequences. 
+
+
+*What's the difference between statically typed language and dynamically typed languages*
+- a language is statically typed if the type of a variable is known at compile time. In practice this means the programmer must specify what type each variable is: Java, C, C++. 
+  - advantage - all kinds of checking can be done by compiler, and so bugs are caught early. 
+- a language is dynamically typed if the type is interpreted at runtime. This means you can write a little quicker because you don't have to specify type everytime. : Perl, Ruby, Python. 
+
+Scripting languages are often referred to as very high-level programming languages, as they operate at a high level of abstraction, or as control languages. - usually dynamic
+
+An interpreted language is a programming language for which most of its implementations execute instructions directly, without previously compiling a program into machine-language instructions. 
+
+A compiled language is a programming language whose implementations are typically compilers (translators that generate machine code from source code), and not interpreters (step-by-step executors of source code, where no pre-runtime translation takes place).
+  - low-level programming languages are typically compiled - there is more of a one-to-one correspondence between programmed code adn the hardware operations performed by machine code 
+  Ex: Java, C, C++, C#
