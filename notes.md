@@ -30,3 +30,15 @@ Refactoring to have SR(single responsiblity)
 
 
 THe path to changeable and maintable object-oriented software begins with classes that have a single responsibility. Classes that do one thing isolate that thing from the rest of your applicaiton. This isolation allows changes without consequence and reuse without duplication. 
+
+**Managing Dependencies
+
+Building well designed objects have a single responsibility, their very nature requires that they collaborate to accomplish complex tasks. This collaboration is powerful and perilous. To collaborate, an object must know something about others. *Knowing* creates a dependency
+
+- message chaining is a dependency i.e. knowing the name of a message you plan to send ot someone other than self. 
+- test on code can also be a dependency. Natural tendency of "new to testing" programmers is to write tests that are too tightly coupled to code. 
+  - This **tight coupling** leads to frustration; the tests break every time the code is refactored, even when fundamental behaviour doesn't change. 
+
+Write Looslely Coupled Code
+- Moving the creation of a new instance of another class outside of the current class decouples the two classes. Decoupling can be achieved by rearranging existing code.
+- This technique is known as **dependency injection**. DI is software design pattern that implements inversion of control for resolving dependencies. A **dependency** is an object that can be used as a service. An injection is the passing of a dependency to a dependent object (a client) that would use it. The service is part of the client's state. Passing the service to the client, rather than allowing a client to build or find the service, is the fundamental requirement of the pattern. 
