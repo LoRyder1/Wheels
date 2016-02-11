@@ -74,3 +74,15 @@ An interpreted language is a programming language for which most of its implemen
 A compiled language is a programming language whose implementations are typically compilers (translators that generate machine code from source code), and not interpreters (step-by-step executors of source code, where no pre-runtime translation takes place).
   - low-level programming languages are typically compiled - there is more of a one-to-one correspondence between programmed code adn the hardware operations performed by machine code 
   Ex: Java, C, C++, C#
+
+
+
+** Dependency Management 2 **
+
+- dependent on argument order and defaults 
+- Gear class is less likely to change = less dependencies
+- Wheel depends on Gear class
+- single responsibilities principle
+- have to be able to calculate gear_inches of a different object
+- try to reduce the number of dependencies, while exposing big dependencies publicly
+- reveal dependencies instead of conceal them.

@@ -1,6 +1,3 @@
-# Dependency Management
-# dependent on argument order 
-# Gear class is less likely to change
 ########################################################################
 
 class Gear
