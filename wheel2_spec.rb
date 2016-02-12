@@ -51,4 +51,10 @@ describe 'Gear' do
       expect(subject.ratio).to eq 2.0
     end
   end
+
+  describe '#gear_inches' do
+    it 'is defined as a method' do
+      expect(Gear.method_defined?(:gear_inches)).to be true
+    end
+  end
 end
