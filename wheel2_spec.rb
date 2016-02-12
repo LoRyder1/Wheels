@@ -53,12 +53,21 @@ describe 'Gear' do
   end
 
   describe '#gear_inches' do
+    def set_ratio ratio
+      allow(subject).to receive(:ratio).and_return(ratio)
+    end
+
     it 'is defined as a method' do
       expect(Gear.method_defined?(:gear_inches)).to be true
     end
 
     it 'expects one argument' do
       expect(subject.method(:gear_inches).arity).to eq 1
+    end
+
+    it 'calculates gear_inches correctly' do
+      set_ratio 5
+      expect(subject.gear_inches(3)).to eq 15
     end
   end
 end

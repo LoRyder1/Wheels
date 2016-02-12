@@ -86,3 +86,22 @@ A compiled language is a programming language whose implementations are typicall
 - have to be able to calculate gear_inches of a different object
 - try to reduce the number of dependencies, while exposing big dependencies publicly
 - reveal dependencies instead of conceal them.
+
+TESTING
+- helper methods help another method complete its task
+ 
+- the main benefit of using **mock** objects is increased testability throughout a system
+- a secondary benefit is an improved ability to do continuous design. 
+
+**Unit tests should be atomic** - TDD style unit tests should be smal tests that cover a specific, **granular** area of the code. A lot of the times the code interacts with other classes, but you only want to worry about the proper functioning of the class under test. You have the ability to perserve the atomicity of the unit test by replacing the external resources and coding dependencies by using a mock object to establish an **expected behavior.**
+  - As an engineer hardest task is to model boundary conditions. 
+    - a boundary being a point in a system with known behavior. By doing this you can ignore anything outside the boundary.
+    - establishing boundary conditions minimizes the number of variables within an engineering calculation.
+  - primary claims for **TDD efficiency** is the reduced time spent degugging code. 
+  - This is only true if and only if you write fine-grained tests. 
+  - Excessive mocking can result in too tightly coupled code making it really hard to refactor code without breaking tests. 
+
+- Order Independent and Isolated
+- Intention Revealing
+- Easy to Setup
+- Runs Fast

@@ -1052,4 +1052,39 @@ Most visible elements of design are principles and patterns. Design relies on ab
 - inversion of control - increase modularity and make it extensible.<br />
 - dependency inversion principle <br />
   - high level modules should not depend on low-level modules. Both should depend on abstractions.<br />
-  - Abstractions should not depend on details. Details should depend on abstractions. </p></article></body></html>
+  - Abstractions should not depend on details. Details should depend on abstractions. <br />
+- through DI a class can be smarter because it knows less. </p>
+<p>Isolate instance creation, Isolate vulnerable externable messages, </p>
+<p>Remove Arguemnt-Order Dependencies</p>
+<p>Remove defaults form initialize and isolate them inside of a separate wrapping method. </p>
+<p>Choosing Dependency Direction</p>
+<ul>
+<li>depend on things that change less often then you do. </li>
+<li>some classes are more likely than others to have changes in requirements.</li>
+<li>concrete classes are more likely to change than abstract classes.</li>
+<li>changing a class that has many dependents will result in widespread consequences. </li>
+</ul>
+<p><em>What&rsquo;s the difference between statically typed language and dynamically typed languages</em><br />
+- a language is statically typed if the type of a variable is known at compile time. In practice this means the programmer must specify what type each variable is: Java, C, C++. <br />
+  - advantage - all kinds of checking can be done by compiler, and so bugs are caught early. <br />
+- a language is dynamically typed if the type is interpreted at runtime. This means you can write a little quicker because you don&rsquo;t have to specify type everytime. : Perl, Ruby, Python. </p>
+<p>Scripting languages are often referred to as very high-level programming languages, as they operate at a high level of abstraction, or as control languages. - usually dynamic</p>
+<p>An interpreted language is a programming language for which most of its implementations execute instructions directly, without previously compiling a program into machine-language instructions. </p>
+<p>A compiled language is a programming language whose implementations are typically compilers (translators that generate machine code from source code), and not interpreters (step-by-step executors of source code, where no pre-runtime translation takes place).<br />
+  - low-level programming languages are typically compiled - there is more of a one-to-one correspondence between programmed code adn the hardware operations performed by machine code <br />
+  Ex: Java, C, C++, C#</p>
+<p><strong> Dependency Management 2 </strong></p>
+<ul>
+<li>dependent on argument order and defaults </li>
+<li>Gear class is less likely to change = less dependencies</li>
+<li>Wheel depends on Gear class</li>
+<li>single responsibilities principle</li>
+<li>have to be able to calculate gear_inches of a different object</li>
+<li>try to reduce the number of dependencies, while exposing big dependencies publicly</li>
+<li>reveal dependencies instead of conceal them.</li>
+</ul>
+<p>TESTING<br />
+- helper methods help another method complete its task</p>
+<ul>
+<li>t</li>
+</ul></article></body></html>
