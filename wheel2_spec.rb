@@ -17,5 +17,15 @@ describe 'Wheel' do
       expect(subject.diameter).to eq 8
     end
   end
+
+  describe '#gear_inches' do
+    it 'initializing Wheel creates new instance of class gear' do
+      expect(subject.gear).to be_an_instance_of(Gear)
+    end
+
+    it 'is defined as a method' do
+      expect(Wheel.method_defined?(:gear_inches)).to be true
+    end
+  end
 end
 
