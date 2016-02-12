@@ -36,4 +36,10 @@ describe 'Gear' do
   it 'expect 2 arguments' do
     expect(subject.method(:initialize).arity).to eq 2
   end
+
+  describe '#ratio' do
+    it 'is defined as a method' do
+      expect(Gear.method_defined?(:ratio)).to be true
+    end
+  end
 end
