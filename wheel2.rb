@@ -31,4 +31,4 @@ class Wheel
   end
 end
 
-p Wheel.new(26, 1.5, 52, 11).gear_inches
+# p Wheel.new(26, 1.5, 52, 11).gear_inches
