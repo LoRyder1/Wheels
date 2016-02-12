@@ -29,3 +29,11 @@ describe 'Wheel' do
   end
 end
 
+describe 'Gear' do
+  let(:num) {double('num')}
+  subject {Gear.new(num, num)}
+
+  it 'expect 2 arguments' do
+    expect(subject.method(:initialize).arity).to eq 2
+  end
+end
