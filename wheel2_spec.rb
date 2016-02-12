@@ -56,5 +56,9 @@ describe 'Gear' do
     it 'is defined as a method' do
       expect(Gear.method_defined?(:gear_inches)).to be true
     end
+
+    it 'expects one argument' do
+      expect(subject.method(:gear_inches).arity).to eq 1
+    end
   end
 end
