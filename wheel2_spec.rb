@@ -33,6 +33,10 @@ describe 'Gear' do
   let(:num) {double('num')}
   subject {Gear.new(num, num)}
 
+  def set_vars chainring, cog
+    allow(subject).to receive_messages(chainring: chainring, cog: cog)
+  end
+
   it 'expect 2 arguments' do
     expect(subject.method(:initialize).arity).to eq 2
   end
@@ -40,6 +44,11 @@ describe 'Gear' do
   describe '#ratio' do
     it 'is defined as a method' do
       expect(Gear.method_defined?(:ratio)).to be true
+    end
+
+    it 'calculates ratio correctly' do
+      set_vars(8,4)
+      expect(subject.ratio).to eq 2.0
     end
   end
 end
